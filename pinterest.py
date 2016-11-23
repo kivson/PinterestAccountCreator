@@ -7,9 +7,11 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
 
 CHROME_DRIVER = "./bin/chromedriver"
+chromeOptions = webdriver.ChromeOptions()
+prefs = {"profile.managed_default_content_settings.images":2}
+chromeOptions.add_experimental_option("prefs",prefs)
 
-
-browser = webdriver.Chrome(executable_path=CHROME_DRIVER)
+browser = webdriver.Chrome(executable_path=CHROME_DRIVER, chrome_options=chromeOptions)
 browser.implicitly_wait(1)
 waiter = WebDriverWait(browser, 20)
 

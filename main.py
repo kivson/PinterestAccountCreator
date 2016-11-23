@@ -4,7 +4,7 @@ import operator
 from contas import gerar_contas
 from pinterest import criar_conta, seguir_conta
 
-contas = gerar_contas(300, "kivson+teste56{}@gmail.com", 'supersenha@123')
+contas = gerar_contas(300, "kivson+teste59{}@gmail.com", 'supersenha@123')
 
 contas_criadas = filter(operator.itemgetter('criado'), map(criar_conta, contas))
 
